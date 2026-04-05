@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  tournament:
+    build: .
+    ports:
+      - "9804:9804"
+    volumes:
+      - tournament_data:/data
+    environment:
+      - PORT=9804
+volumes:
+  tournament_data:
