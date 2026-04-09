@@ -48,7 +48,7 @@ func main() {
 	}
 	defer db.Close()
 
-	srv := server.New(db, server.DefaultLimits(), dataDir)
+	srv := server.New(db, server.DefaultLimits(dataDir), dataDir)
 
 	fmt.Printf("\n  Tournament v%s — Self-hosted tournament brackets and event management\n  Dashboard:  http://localhost:%s/ui\n  API:        http://localhost:%s/api\n  Data:       %s\n  Questions? hello@stockyard.dev — I read every message\n\n", version, port, port, dataDir)
 	log.Printf("tournament: listening on :%s", port)
